@@ -1,0 +1,12 @@
+<h3>Person Detail</h3>
+<table class="table table-striped">
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+  </tr>
+  <tr>
+    <td>{{person.id}}</td>
+    <td>{{person.name}}</td>
+  </tr>
+  <td><a [routerLink]="['/person-edit', person.id]">Edit</a></td>
+</table>
