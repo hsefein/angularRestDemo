@@ -1,0 +1,27 @@
+
+        <h3>Person List</h3>
+<table class="table table-striped">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>DoB</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td><a [routerLink]="['/person-detail', person.id]">{{person.id}}</a></td>
+    <td><a [routerLink]="['/person-detail', person.id]">{{person.name}}</a></td>
+    <td>{{person.dob}}</td>
+    <td><a [routerLink]="['/person-edit', person.id]"><mat-icon>edit</mat-icon></a></td>
+    <td><a (click)="delete(person)"><mat-icon>delete_forever</mat-icon></a></td>
+  </tr>
+
+</table>
+
+<a mat-button color="primary" routerLink="/person-add">
+  <mat-icon>circle_add</mat-icon>
+</a>
+
+
+
+
