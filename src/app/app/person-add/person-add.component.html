@@ -1,0 +1,21 @@
+
+<!--<div class="container">-->
+  <h3>Person Add</h3>
+  <!--<form (ngSubmit)="add()">-->
+    <mat-form-field>
+      <mat-label>Person Name</mat-label>
+      <input matInput [formControl]="PersonName" type="text" >
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" [formControl]="PersonDate" >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+    <button class="btn" (click)="cancel()" mat-raised-button>Cancel</button>
+    <button class="btn btn-primary" (click)="add()" mat-raised-button color="primary">Add</button>
+  <!--</form>-->
+<!--</div>-->

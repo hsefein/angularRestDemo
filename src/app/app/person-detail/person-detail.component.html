@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+
+  <div class="col-md-4">
+    <mat-card>
+    <h3>Person Detail</h3>
+    <table class="table table-striped">
+      <tr>
+        <td>Id</td>
+        <td>{{person.id}}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{person.name}}</td>
+      </tr>
+      <tr>
+        <td>DoB</td>
+        <td>{{person.dob}}</td>
+      </tr>
+    </table>
+    <a mat-raised-button [routerLink]="['/person-edit', person.id]">Edit</a>
+      <a mat-raised-button [routerLink]="['/persontask-add', person.id]">Add Task</a>
+      <!--<a mat-raised-button [routerLink]="['/task-add']">Add Task</a>-->
+
+    </mat-card>
+  </div>
+
+    <div class="col-md-8">
+      <mat-card>
+        <app-persontask-list></app-persontask-list>
+      </mat-card>
+    </div>
+
+  </div>
+</div>
+
+<!--<router-outlet></router-outlet>-->
+

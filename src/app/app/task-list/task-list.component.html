@@ -1,0 +1,25 @@
+<div class="col-md-12">
+
+    <h3>Task List</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr *ngFor="let task of tasks">
+        <td>{{task.id}}</td>
+        <td>{{task.name}}</td>
+        <td><a><mat-icon>edit</mat-icon></a></td>
+        <td><a (click)="delete(task)">
+          <mat-icon>delete_forever</mat-icon>
+        </a></td>
+      </tr>
+    </table>
+
+  <a [routerLink]="['/task-add']">
+    <mat-icon>circle_add</mat-icon>
+  </a>
+
+</div>
